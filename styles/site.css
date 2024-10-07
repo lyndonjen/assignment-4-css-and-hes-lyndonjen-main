@@ -45,61 +45,329 @@ body {
     padding: 0;
 }
 
-/* turn off sections you aren't working on so you can focus!
-   I suggest you begin with working on the "footer"
-*/
-/* consider uncommenting this to start so that only the footer is visible! */
-/*
-div.explore,
-div.studentsuccess,
-header
-{
-    display: none;
-}
-*/
-
-/* -----------------------------
-   Styles for footer
-   ----------------------------- */
-
-/* ----------------------------- */
-
 /* -----------------------------
    Styles for header
    ----------------------------- */
 
-/* ----------------------------- */
+header h2 {
+    background-color: #A51C30;
+    font-family: 'Roboto Condensed', Arial, sans-serif;
+    text-transform: capitalize;
+    font-variant: small-caps;
+    margin: 0;
+    padding: .25rem .5rem;
+}
 
+header h2.wordmark {
+    background-color: #FFFFFF;
+    background-image: url("../images/hes_shield_wordmark.svg");
+    background-repeat: no-repeat;
+    height: 106.1px;
+    width: 258px;
+    padding: 0;
+    text-indent: -3000px;
+}
+
+/* ----------------------------- */
 
 /* -----------------------------
    Styles for header primary nav
    ----------------------------- */
+header {
+    background-color: white;
+    color: black;
+    margin: 0;
+    padding: 0;
+}
+
+header a {
+    color: black;
+    text-decoration: none;
+    text-decoration-color: white;
+}
+
+header a:hover {
+    color: #a51c30;
+    text-decoration: underline;
+}
+
+header nav {
+    text-align: right;
+}
 
 /* ----------------------------- */
-
 
 /* -----------------------------
-   Styles for header primary nav
-   ----------------------------- */
+Styles for header primary nav
+----------------------------- */
+header nav.primary {
+    font-weight: bold;
+}
+
+header nav.primary ul li {
+    display: inline;
+    padding-left: 0;
+}
+
+header nav.primary ul li a::after {
+    content: " | ";
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+}
+
+header nav.primary ul li:nth-last-child(2) a::after,
+header nav.primary ul li:last-child a::after {
+    content: "";
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+}
+
+header nav.primary ul li:last-child a {
+    color: white;
+}
+
+header nav.primary ul li:last-child {
+    background-color: #a51c30;
+    color: white;
+    padding: 10px;
+    margin: 5px; 
+    border: 2px solid #a51c30;
+    display: inline-block;
+}
 
 /* ----------------------------- */
-
 
 /* -----------------------------
-   Styles for header secondary nav
-   ----------------------------- */
+Styles for header secondary nav
+----------------------------- */
+header nav.secondary {
+    font-weight: bold;
+}
+
+header nav.secondary a {
+    color: #4d84c4;
+}
+
+header nav.secondary ul li {
+    display: inline;
+    padding-left: 0;
+}
+
+header nav.secondary ul li a::after {
+    content: "  ";
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+}
+
+header nav.secondary ul li:last-child a::after {
+    content: "";
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+}
+
+header nav.secondary ul li:last-child {
+    border: 2px solid #4d84c4;
+    padding: 10px;
+    margin: 5px; 
+}
 
 /* ----------------------------- */
-
 
 /* -----------------------------
    Styles for "Explore"
    ----------------------------- */
+main {
+    font-family: 'Roboto', Arial, sans-serif;
+    color: white;
+    height: 1400px;
+    padding: 0;
+    text-indent: 0px;
+    width: 100%;
+    max-width: 1350px;
+    box-sizing: border-box;
+    background-color: #ebebeb;
+}
+
+.explore {
+    display: flex;
+    flex-wrap: wrap;
+    background-image: url("../images/campus_bridge_river.jpg");
+    background-repeat: no-repeat;
+    height: 600px;
+    justify-content: space-between;
+}
+
+.sections {
+    font-family: 'Roboto Condensed', Arial, sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+section {
+    background-color: #ebebeb;
+    color: #a51c30;
+    flex: 1 1 30%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin: 10px;
+    max-width: calc(33.33% - 20px);
+    border-top: 6px solid #a51c30;
+    max-height: 238px;
+}
+
+section h2 {
+    background-color: white;
+    color: black;
+}
+
+section a {
+    color: #a51c30;
+    text-decoration: none;
+    text-decoration-color: white;
+}
+
+section ul li {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+section ul li::after {
+    content: url('../images/arrow-right.svg');
+    position: relative;
+    margin-right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
 
 /* ----------------------------- */
 
 /* -----------------------------
    Styles for "Student Success"
    ----------------------------- */
+
+.studentsuccess {
+    color: black;
+    background-color: #ebebeb;
+}
+.studentsuccess h2 {
+    text-align: center;
+}
+
+.studentsuccess p {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.articles {
+    font-family: 'Roboto Condensed', Arial, sans-serif;
+    color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: white;
+    height: 700px;
+    max-width: 1350px;
+    box-sizing: border-box;
+}
+
+.articles article {
+    flex: 1;
+    padding: 5px;
+    margin: 5px;
+    max-width: calc(33.33% - 20px);
+    height: 650px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.articles img {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.articles p {
+    padding: 0;
+    padding-top: 10px;
+    margin: 0;
+}
+
+article ul {
+    padding: 0;
+    padding-left: 10px;
+    margin: 0;
+}
+
+article ul li {
+    list-style-type: none;
+}
+
+article ul li:nth-child(1)::before {
+    content: url('../images/mortar-board.svg');
+}
+
+article ul li:nth-child(2)::before {
+    content: url('../images/map-marker.svg');
+}
+
+/* ----------------------------- */
+
+/* -----------------------------
+   Styles for footer
+   ----------------------------- */
+footer {
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    text-decoration-color: white;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer nav.contactplus,
+footer nav.privacyplus {
+    font-weight: bold;
+}
+
+footer p {
+    margin-left: 2.5rem;
+    margin-bottom: 0rem;
+}
+
+footer nav.contactplus ul li,
+footer nav.privacyplus ul li {
+    display: inline;
+    padding-left: 0;
+}
+
+footer nav.contactplus ul li a::after {
+    content: "  ";
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+}
+
+footer nav.privacyplus ul li a::after {
+    content: " | ";
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+}
+
+footer nav.contactplus ul li:last-child a::after,
+footer nav.privacyplus ul li:last-child a::after {
+    content: "";
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+}
 
 /* ----------------------------- */
